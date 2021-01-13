@@ -9,6 +9,28 @@ import Foundation
 
 class Webservice{
     
+    func getTopNews(completion:@escaping(([Article]?)->Void)){
+        
+        guard let url = URL(string: "https://island-bramble.glitch.me/top-news") else{
+            fatalError("Url is not correct")
+        }
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+           
+            guard let data = data, error == nil else{
+                completion(nil)
+                return
+            }
+            
+            let article = try? JSONDecoder().decode([Article].self, from: data)
+            article == nil ? completion(nil) : completion(article)
+            
+        }.resume()
+    }
+
+    
+    
+    
     func getStocks(completion:@escaping(([Stocks]?)->Void)){
         
         guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else{

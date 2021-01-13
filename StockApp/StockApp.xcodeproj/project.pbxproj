@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		595D14D325AF34C400D50492 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D14D225AF34C400D50492 /* Article.swift */; };
 		59FA559225ADA73F00797205 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FA559125ADA73F00797205 /* StockListView.swift */; };
 		D04E524225A8C705007D132C /* StockAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E524125A8C705007D132C /* StockAppApp.swift */; };
 		D04E524425A8C705007D132C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E524325A8C705007D132C /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		595D14D225AF34C400D50492 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		59FA559125ADA73F00797205 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		D04E523E25A8C705007D132C /* StockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04E524125A8C705007D132C /* StockAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAppApp.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D04E525625A8C868007D132C /* Stocks.swift */,
+				595D14D225AF34C400D50492 /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				D04E524425A8C705007D132C /* ContentView.swift in Sources */,
 				59FA559225ADA73F00797205 /* StockListView.swift in Sources */,
+				595D14D325AF34C400D50492 /* Article.swift in Sources */,
 				D04E524225A8C705007D132C /* StockAppApp.swift in Sources */,
 				D04E525725A8C868007D132C /* Stocks.swift in Sources */,
 				D04E526225AA1B3F007D132C /* SearchView.swift in Sources */,
