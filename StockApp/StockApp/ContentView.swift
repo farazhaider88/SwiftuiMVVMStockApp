@@ -43,6 +43,8 @@ struct ContentView: View {
                 StockListView(stocks: filteredStock)
                     .offset(y:100)
 
+                NewsArticleView(newsArticles: self.stockListVM.news)
+                    .offset(y:500)
                 
             }
             

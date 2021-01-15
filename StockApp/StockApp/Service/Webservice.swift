@@ -18,12 +18,19 @@ class Webservice{
         URLSession.shared.dataTask(with: url) { (data, response, error) in
            
             guard let data = data, error == nil else{
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+               
                 return
             }
             
             let article = try? JSONDecoder().decode([Article].self, from: data)
-            article == nil ? completion(nil) : completion(article)
+
+            DispatchQueue.main.async {
+                 completion(article)
+            }
+          
             
         }.resume()
     }
@@ -40,12 +47,17 @@ class Webservice{
         URLSession.shared.dataTask(with: url) { (data, response, error) in
            
             guard let data = data, error == nil else{
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
                 return
             }
             
             let stocks = try? JSONDecoder().decode([Stocks].self, from: data)
-            stocks == nil ? completion(nil) : completion(stocks)
+            DispatchQueue.main.async {
+                completion(stocks)
+            }
+           
             
         }.resume()
     }
