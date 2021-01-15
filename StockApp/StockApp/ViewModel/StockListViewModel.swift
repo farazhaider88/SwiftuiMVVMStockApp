@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class StockListViewModel: ObservableObject{
     
     @Published var searchTerm : String = ""
-   @Published var stocks = [StockViewModel]()
+    @Published var stocks = [StockViewModel]()
     @Published var news = [NewsArticleViewModel]()
+    @Published var dragOffset: CGSize = CGSize(width:0, height: 680)
     
     
     func load(){
